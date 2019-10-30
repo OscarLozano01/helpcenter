@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        <title>Mostrar y ocultar contenido con Javascript</title>
+        <style type="text/css">
+
+            #content {
+                width: 450px;
+            }
+
+            #close {
+                float: right;
+                font-weight: bold;
+                color: red;
+            }
+             #clos {
+                float: right;
+                font-weight: bold;
+                color: red;
+            }
+
+            .content2 {
+                margin: 0px auto;
+                min-height: 100px;
+                width: 450px;
+                box-shadow: 0 2px 5px #666666;
+                padding: 10px;
+            }
+
+        </style>
+        <script>
+            function mostrar() {
+                div = document.getElementById('flotante');
+                div.style.display = '';
+            }
+            function ver() {
+                div = document.getElementById('flotant');
+                div.style.display = '';
+            }
+
+            function cerrar() {
+                div = document.getElementById('flotante');
+                div.style.display = 'none';
+            }
+             function cerra() {
+                div = document.getElementById('flotant');
+                div.style.display = 'none';
+            }
+        </script>                        
+    </head>
+    <body>
+        <div id="content">
+            <p><a href="javascript:mostrar();">Si</a></p>
+            <div id="flotante" style="display:none;" class="content2"> 
+                <div id="close"><a href="javascript:cerrar();">cerrar</a></div>
+                Este es un div ocultar
+            </div>
+        </div>
+        <div id="content">
+            <p><a href="javascript:ver();">No</a></p>
+            <div id="flotant" style="display:none;" class="content2"> 
+                <div id="clos"><a href="javascript:cerra();">cerrar</a></div>
+                Este es un div ocultar
+            </div>
+        </div>        
+    </body>
+</html>
