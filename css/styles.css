@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:700i|Roboto:300,400,700');
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", "Helvetica", sans-serif;
+}
+
+body {
+	font-size: 14px;
+	font-weight: 400;
+	color: #FF0136;
+	line-height: 26px;
+	background: #FF0136;
+	background: -webkit-linear-gradient(to top, #FF512F, #DD2476);
+	background: linear-gradient(to top, #FF512F, #DD2476);
+	text-align: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: auto;
+	width: 100%;
+	outline: none;
+}
+
+
+/**************************************
+            Card Wrapper
+**************************************/
+
+.card__wrapper {
+    position: relative;
+    top: 5%;
+    height: 540px;
+    width: 602px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+
+/**************************************
+            Card Setting
+**************************************/
+
+.card {
+	position: absolute;
+	display: block;
+	top: 34px;
+	height: 480px;
+	width: 320px;
+	background: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.60);
+	transform: translateX(-50%);
+	transition: left 0.5s ease-out;
+	will-change: left;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.card--one {
+	left: 50%;
+}
+
+.card--two,
+.card--three,
+.card--four {
+	left: 150%;
+}
+
+.card__header {
+	position: relative;
+	height: 288px;
+	color: #fff;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.card__header--one {
+	background: #673AB7;
+	background: -webkit-linear-gradient(to top, #ffffff, #673AB7);
+	background: linear-gradient(to top, #ffffff, #FF0136);
+}
+
+.card__header--two {
+	background: #00BCD4;
+	background: -webkit-linear-gradient(to top, #ffffff, #00BCD4);
+	background: linear-gradient(to top, #ffffff, #00BCD4);
+}
+
+.card__header--three {
+	background: #FF9800;
+	background: -webkit-linear-gradient(to top, #ffffff, #FF9800);
+	background: linear-gradient(to top, #ffffff, #FF9800);
+}
+
+.card__header--four {
+	background: #03A9F4;
+	background: -webkit-linear-gradient(to top, #ffffff, #03A9F4);
+	background: linear-gradient(to top, #ffffff, #03A9F4);
+}
+
+.card__brand {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 112px;
+	line-height: 130px;
+	font-weight: 900;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.25);
+	overflow: hidden;
+	text-transform: capitalize;
+}
+
+.card__image {
+	position: absolute;
+	top: -28px;
+	left: -34px;
+	width: 120%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	z-index: 1;
+}
+
+.card__will-animate {
+	will-change: transform;
+}
+
+.card__status {
+	position: absolute;
+	display: block;
+	bottom: -15px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+	line-height: 37px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	z-index: 99;
+}
+
+.card__status:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 60px;
+	bottom: 0;
+	height: 36px;
+	width: 200px;
+	background: #DA22FF;
+	background: -webkit-linear-gradient(to left, #DA22FF, #9733EE);
+	background: linear-gradient(to left, #FF0136, #FF0136);
+	transform: skew(-45deg);
+	border-radius: 5px;
+	z-index: -1;
+}
+
+.card__body {
+	position: relative;
+	height: 192px;
+	color: #000000;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.card__description {
+	position: absolute;
+	display: inline-block;
+	left: 0;
+	right: 0;
+	background: #ffffff;
+	font-size: 24px;
+	font-weight: 200;
+	text-transform: uppercase;
+	color: #000000;
+	margin: 50px 0 0 0;
+	padding: 0 10px;
+}
+
+.card__description:after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -15px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	width: 25%;
+	background: #000000 ;
+	margin: auto;
+	padding: 0 25px;
+	z-index: -1;
+}
+
+.card__button {
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	width: 75%;
+	font-size: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #FF0136;
+	padding: 10px 0;
+	margin: auto;
+	border: 2px solid #FF0136;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: color 0.5s ease-out, border 0.5s ease-out;
+}
+
+.card__button:hover {
+	border: 2px solid #FF6383;
+	color: #FF6383;
+	transition: color 0.5s ease-out, border 0.5s ease-out;
+}
+
+.cards-placeholder {
+	display: block;
+	position: relative;
+	text-align: center;
+	top: 10px;
+	right: 0;
+	left: 0;
+	width: 100px;
+	margin: 20px auto 35px;
+}
+
+.cards-placeholder__item {
+	opacity: 0.3;
+	display: inline-block;
+	margin-right: 10px;
+	background-color: #fff;
+	width: 8px;
+	height: 8px;
+	border-radius: 5px;
+	transition: opacity 0.2s;
+	will-change: opacity;
+}
+
+.cards-placeholder__item--active {
+	opacity: 1;
+}
+
+
+/**************************************
+            Media Query
+**************************************/
+
+@media screen and (max-width: 600px) {
+	.card__wrapper {
+		width: 100%;
+	}
+}
+
+
+/**************************************
+             Share Buttons
+**************************************/
+
+.share {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.share li {
+	position: relative;
+}
+
+.share li:nth-of-type(1) .social-link,
+.share li:nth-of-type(1) .social-link:hover {
+	background: #3B5998 url("http://grapestheme.com/codepen/fb.png") 50% 50% no-repeat;
+	background-size: 20px auto;
+}
+
+.share li:nth-of-type(2) .social-link,
+.share li:nth-of-type(2) .social-link:hover {
+	background: #4099FF url("http://grapestheme.com/codepen/tw.png") 50% 50% no-repeat;
+	background-size: 20px auto;
+}
+
+.share li .social-link {
+	display: block;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	padding: 15px 20px;
+}
+
+*{
+    margin: opx;
+    padding: 0px;
+}
+#contenedor{
+    margin: auto;
+    margin-top: 60px;
+    width: 1000px;
+    height: 567px;
+}
+#izquierda{
+    width:300px;
+    height: 567px;
+    float: left;
+}
+#centro{
+    width:300px;
+    height: 567px;
+    margin-left: 50px;
+    float: left;
+}
+#derecha{
+    width:300px;
+    height: 567px;
+    float: right;
+}
+

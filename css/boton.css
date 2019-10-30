@@ -1,0 +1,29 @@
+button, .button {
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	width: 75%;
+	font-size: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #fcfcfc;
+	padding: 10px 0;
+	margin: auto;
+	border: 2px solid #FF6383;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: color 0.5s ease-out, border 0.5s ease-out;
+}
+
+ 	@-webkit-keyframes redPulse {
+	  from { background-color: #FF6383; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #FF1D4C; -webkit-box-shadow: 0 0 18px #FF1D4C; }
+	  to { background-color: #FF6383; -webkit-box-shadow: 0 0 9px #333; }
+	}
+	a.button {
+		-webkit-animation-duration: 2s;
+		-webkit-animation-iteration-count: infinite; 
+	}
+	.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s; }
